@@ -1,6 +1,6 @@
 # kube_scale
 Sample bash script to help scaling Kubernetes deployments to zero and back to initial size in a given namespace or cluster wide.
-In conjunction with Cluster Autoscaler and a cron job, you get scheduled Kube cluster scaling.
+In conjunction with [Cluster Autoscaler](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/examples/cluster-autoscaler-autodiscover.yaml) and a cron job, you get scheduled Kube cluster scaling.
 #
 
 ```
@@ -20,6 +20,7 @@ usage() {
 ```
 
 This script assumes Istio is installed on the cluster. Istio components are not scaled to zero, but down to 1 pod and back to initial size when needed. Obviously, feel free to use it if/as you see it.
+
 
 If you have a Jenkins server somewhere, then you can do something like (or just use your favourite cron scheduler): 
 
